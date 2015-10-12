@@ -22,16 +22,16 @@ tv <- function(input){
 
   return(newdata)
   
-  stopifnot("age" %in% names(newdata))
-  stopifnot("marital" %in% names(newdata))
+#  stopifnot("age" %in% names(newdata))
+#  stopifnot("marital" %in% names(newdata))
   
-  newdata$age <- as.numeric(newdata$age)
+#  newdata$age <- as.numeric(newdata$age)
 
   #tv_model is included with the package
-  newdata$tv <- as.vector(predict.gam(tv_model, newdata = newdata))
+#  newdata$tv <- as.vector(predict.gam(tv_model, newdata = newdata))
 
-  testgg <- c(2,3,5);
+#  testgg <- c(2,3,5);
 
-  return(testgg)
+  #  return(testgg)
   #  return(newdata)
 }
