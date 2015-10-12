@@ -25,5 +25,9 @@ tv <- function(input){
 
   #tv_model is included with the package
   newdata$tv <- as.vector(predict.gam(tv_model, newdata = newdata))
-  return(newdata)
+
+  testgg <- c(2,3,5);
+
+  return(testgg)
+  #  return(newdata)
 }
