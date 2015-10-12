@@ -62,6 +62,6 @@ themodel = arima(kingstimeseries, order = c(1,1,1))
 #themodel
 res = predict(themodel, n.ahead=5)
 
-return res;
+return(res);
   
 }
