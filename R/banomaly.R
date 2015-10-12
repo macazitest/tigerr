@@ -10,7 +10,7 @@ banomaly <- function(input){
         as.data.frame(input)
     }
 
-    return new_data;
+    return(new_data)
 
 #    data(raw_data)
 #    res = AnomalyDetectionTs(raw_data, max_anoms=0.02, direction='both', plot=TRUE)
