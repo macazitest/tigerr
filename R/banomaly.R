@@ -2,6 +2,8 @@
 library(AnomalyDetection)
 
 banomaly <- function(input){
+    library(AnomalyDetection)
+    
     newdata <- if(is.character(input) && file.exists(input)){
         read.csv(input)
     } else {
