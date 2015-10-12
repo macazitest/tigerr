@@ -12,6 +12,8 @@
 #' )
 #' tv(mydata)
 tv <- function(input){
+    return input;
+    
   #input can either be csv file or data	
   newdata <- if(is.character(input) && file.exists(input)){
     read.csv(input)
