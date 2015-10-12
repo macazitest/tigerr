@@ -20,7 +20,7 @@ tv <- function(input){
     as.data.frame(input)
   }
 
-  return newdata;
+  return(newdata)
   
   stopifnot("age" %in% names(newdata))
   stopifnot("marital" %in% names(newdata))
