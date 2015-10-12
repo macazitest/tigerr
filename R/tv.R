@@ -11,6 +11,10 @@
 #'    marital=c("MARRIED", "DIVORCED", "WIDOWED", "NEVER MARRIED")
 #' )
 #' tv(mydata)
+
+require("astsa");
+library(forecast);
+
 tv <- function(input){
     
   #input can either be csv file or data	
@@ -20,7 +24,7 @@ tv <- function(input){
     as.data.frame(input)
   }
 
-  return(newdata)
+#  return(newdata)
   
 #  stopifnot("age" %in% names(newdata))
 #  stopifnot("marital" %in% names(newdata))
@@ -34,4 +38,30 @@ tv <- function(input){
 
   #  return(testgg)
   #  return(newdata)
+
+
+#4974780, 5051974, 4976702, 4941353, 4863064, 4778003, 4777013, 4856907, 5065171, 5538048, 5187031, 5128478, 4879649, 4891878, 4989730, 4993284, 4841906, 4769946, 4704377, 4556177, 4589243, 4785520, 4816480, 4695779, 4645886, 4587213, 4484760, 4520141, 4704222, 4788531, 4694898
+
+#kings <- scan("http://10.9.222.23/kings.dat",skip=3);
+kings <- c(4974780, 5051974, 4976702, 4941353, 4863064, 4778003, 4777013, 4856907, 5065171, 5538048, 5187031, 5128478, 4879649, 4891878, 4989730, 4993284, 4841906, 4769946, 4704377, 4556177, 4589243, 4785520, 4816480, 4695779, 4645886, 4587213, 4484760, 4520141, 4704222, 4788531, 4694898);
+#kings;
+
+#auto.arima(kings);
+
+kingstimeseries <- ts(kings)
+#kingstimeseries
+
+#plot.ts(kingstimeseries)
+#plot(kingstimeseries)
+
+#themodel = arima(flow, order = c(1,0,0), seasonal = list(order = c(0,1,1), period = 12))
+#themodel = arima(kingstimeseries, order = c(1,0,0), seasonal = list(order = c(0,1,1), period = 12))
+#themodel = arima(kingstimeseries, order = c(0,1,0))
+themodel = arima(kingstimeseries, order = c(1,1,1))
+
+#themodel
+res = predict(themodel, n.ahead=5)
+
+return res;
+  
 }
