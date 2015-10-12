@@ -12,7 +12,6 @@
 #' )
 #' tv(mydata)
 tv <- function(input){
-    return input;
     
   #input can either be csv file or data	
   newdata <- if(is.character(input) && file.exists(input)){
@@ -20,6 +19,9 @@ tv <- function(input){
   } else {
     as.data.frame(input)
   }
+
+  return newdata;
+  
   stopifnot("age" %in% names(newdata))
   stopifnot("marital" %in% names(newdata))
   
