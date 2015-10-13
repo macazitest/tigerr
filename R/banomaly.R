@@ -9,7 +9,7 @@ banomaly <- function(input){
         as.data.frame(input)
     }
 
-    return(newdata1)
+                                        #    return(newdata1)
 
     library(AnomalyDetection)
 
