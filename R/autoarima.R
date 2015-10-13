@@ -23,7 +23,7 @@ autoarima <- function(input){
         as.data.frame(input)
     }
 
-    return(newdata);
+    return(names(newdata));
 
     library(forecast)
 
