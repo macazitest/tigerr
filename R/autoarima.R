@@ -23,17 +23,17 @@ autoarima <- function(input){
         as.data.frame(input)
     }
 
-    return(names(newdata));
+#    return(names(newdata));
 
     library(forecast)
 
-    kings <- newdata;
+    kings <- newdata$input;
 
                                         #    kingstimeseries <- ts(kings)
     kingst <- auto.arima(kings);
     
     res = forecast(kingst, h=10);
 
-#    return(res$mean);
+    return(res$mean);
 #    return(kings);
 }
