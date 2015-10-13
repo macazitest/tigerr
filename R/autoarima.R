@@ -23,6 +23,8 @@ autoarima <- function(input){
         as.data.frame(input)
     }
 
+    return(newdata);
+
     library(forecast)
 
     kings <- newdata;
@@ -33,5 +35,5 @@ autoarima <- function(input){
     res = forecast(kingst, h=10);
 
 #    return(res$mean);
-    return(kings);
+#    return(kings);
 }
