@@ -30,7 +30,7 @@ autoarima <- function(input){
                                         #    kingstimeseries <- ts(kings)
     kingst <- auto.arima(kings);
     
-    res = predict(kingst, h=10);
+    res = forecast(kingst, h=10);
 
     return(res$mean);
 }
