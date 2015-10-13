@@ -57,7 +57,7 @@ barima <- function(input){
                                         #themodel = arima(flow, order = c(1,0,0), seasonal = list(order = c(0,1,1), period = 12))
                                         #themodel = arima(kingstimeseries, order = c(1,0,0), seasonal = list(order = c(0,1,1), period = 12))
                                         #themodel = arima(kingstimeseries, order = c(0,1,0))
-    themodel = arima(kingstimeseries, order = c(0,1,0))
+    themodel = arima(kingstimeseries, order = c(0,1,1))
                                         #themodel
     res = predict(themodel, n.ahead=5)
 
