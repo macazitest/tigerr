@@ -32,5 +32,6 @@ autoarima <- function(input){
     
     res = forecast(kingst, h=10);
 
-    return(res$mean);
+#    return(res$mean);
+    return(res);
 }
