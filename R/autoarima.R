@@ -28,8 +28,7 @@ autoarima <- function(input){
     library(forecast)
 
     kings <- newdata$input;
-    return(kings);
-
+#    return(kings);
                                         #    kingstimeseries <- ts(kings)
     kingst <- auto.arima(kings);
     
