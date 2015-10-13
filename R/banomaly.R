@@ -3,7 +3,7 @@ banomaly <- function(input){
     newdata1 <- if(is.character(input) && file.exists(input)){
         read.csv(input)
     } else {
-        as.data.frame(input)
+        as.data.frame(input.data)
     }
                                         #    return(newdata1)
     library(AnomalyDetection)
