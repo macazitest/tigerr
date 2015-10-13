@@ -12,8 +12,8 @@
 #' )
 #' tv(mydata)
 
-require("astsa");
-library(forecast);
+#require("astsa");
+#library(forecast);
 
 barima <- function(input){
                                         #input can either be csv file or data	
@@ -22,7 +22,6 @@ barima <- function(input){
     } else {
         as.data.frame(input)
     }
-
                                         #  return(newdata)
     
                                         #  stopifnot("age" %in% names(newdata))
