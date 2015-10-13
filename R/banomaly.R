@@ -2,7 +2,6 @@
 library(AnomalyDetection)
 
 banomaly <- function(input){
-    library(AnomalyDetection)
     
     newdata1 <- if(is.character(input) && file.exists(input)){
         read.csv(input)
@@ -11,6 +10,8 @@ banomaly <- function(input){
     }
 
     return(newdata1)
+
+    library(AnomalyDetection)
 
 #    data(raw_data)
 #    res = AnomalyDetectionTs(raw_data, max_anoms=0.02, direction='both', plot=TRUE)
