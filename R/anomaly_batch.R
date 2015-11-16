@@ -5,6 +5,11 @@ anomalybatch <- function(input){
     } else {
         as.data.frame(input$data)
     }
+
+    dataobj <- input$data;
+
+    return(attributes(dataobj));
+
                                         #    return(newdata1)
     library(AnomalyDetection)
     
