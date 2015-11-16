@@ -14,7 +14,7 @@ anomalybatch <- function(input){
     for(name in names(dataobj)){
 #        curdata <- as.data.frame(attr(dataobj, dim));
         curdata <- dataobj[[name]];
-        return curdata;
+        return(curdata);
     }
 
                                         #    return(newdata1)
