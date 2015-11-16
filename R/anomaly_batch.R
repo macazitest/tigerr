@@ -11,11 +11,16 @@ anomalybatch <- function(input){
     dims <- attributes(dataobj);
 
 #    for(dim in names(dims)){
+
+    reslist <- list();
     for(name in names(dataobj)){
 #        curdata <- as.data.frame(attr(dataobj, dim));
         curdata <- dataobj[[name]];
-        return(curdata);
+        reslist[[name]] <- AnomalyDetectionTs(curdata, max_anoms=input$max_anoms, direction='both', plot=FALSE)
+#        return(curdata);
     }
+
+    return(reslist);
 
                                         #    return(newdata1)
     library(AnomalyDetection)
