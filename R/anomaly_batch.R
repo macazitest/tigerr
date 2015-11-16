@@ -12,7 +12,7 @@ anomalybatch <- function(input){
 #    res = AnomalyDetectionTs(raw_data, max_anoms=0.02, direction='both', plot=TRUE)
 #    res = AnomalyDetectionTs(newdata1, max_anoms=0.02, direction='both', plot=FALSE)
 
-    return input;
+    return(input);
 
     return(newdata1);
     
