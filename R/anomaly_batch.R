@@ -8,7 +8,14 @@ anomalybatch <- function(input){
 
     dataobj <- input$data;
 
-    return(attributes(dataobj));
+    dims <- attributes(dataobj);
+
+#    for(dim in names(dims)){
+    for(name in names(dataobj)){
+#        curdata <- as.data.frame(attr(dataobj, dim));
+        curdata <- dataobj[[name]];
+        return curdata;
+    }
 
                                         #    return(newdata1)
     library(AnomalyDetection)
